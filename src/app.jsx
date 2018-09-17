@@ -16,6 +16,12 @@ const Card = () => (
 )
 
 ReactDOM.render((
+    /*此处也可以选择使用 BrowserRouter，此时需要后端服务器进行路由配置（其他页面的路由都重定向至首页）*/
+    {/*<BrowserRouter>
+        <div>......</div>
+    </BrowserRouter>*/}
+
+    // BrowserRouter 是比较常用的路由；HashRouter 适用于页面比较少且不需要埋点的项目。
     <HashRouter>
         <div className="container">
             <Route path={routePaths.INDEX} exact component={Index} />
