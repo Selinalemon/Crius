@@ -21,7 +21,6 @@ ReactDOM.render((
         <div>......</div>
     </BrowserRouter>*/}
 
-    // BrowserRouter 是比较常用的路由；HashRouter 适用于页面比较少且不需要埋点的项目。
     <HashRouter>
         <div className="container">
             <Route path={routePaths.INDEX} exact component={Index} />
