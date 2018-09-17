@@ -1,10 +1,9 @@
-## webpack-react-spa
+## Crius
 
-> 基于webpack的react单页面应用通用脚手架 2.0.0
+> 基于 webpack 的 react 单页面应用通用脚手架 2.0.0
 
 ### 如何开始新的项目
-##### 1.clone本项目到本地
-##### 2.修改package.json
+##### 1. 修改package.json
 
 根据自己项目情况填写：
 
@@ -20,27 +19,27 @@ ftpTarget | 静态文件目录
 previewDir | 项目浏览服务器
 author | 作者信息
 
-##### 3.修改README.md
-##### 4.npm run dll 生成依赖文件（重要）
-##### 5.npm install 安装依赖
+##### 2. 修改README.md
+##### 3. npm install 安装依赖
+##### 4. npm run dll 生成依赖文件（重要）
 
 ### 开发流程
 #### 开发
-进入开发模式（类似于 jdf b -o）
+进入开发模式（启动本地服务）
 
 npm run dev
 
-#### 自动生成雪碧图
+#### 自动生成雪碧图（可选）
 执行命令之前，在css/sprite 中加入需要生成雪碧图的icon
 
 npm run sprite
 #### 构建
 构建开发/线上环境的代码到build目录，执行该命令时会自动调用代码分析功能，查看各模块代码占比情况
 
-npm run build
+npm run build （lib/下的文件是第三方依赖库，如果不修改，lib下的文件只需要上线一次）
 
 #### 上传
-上传到73环境
+上传到测试服务器
 
 npm run upload
 
@@ -60,7 +59,9 @@ npm run upload
 ##### 13、支持devServer本地调试、热更新；
 ##### 14、内嵌BundleAnalyzerPlugin组件，npm run build 时可查看js文件占比大小；
 ##### 15、支持自动生成雪碧图和相应scss文件；
-##### 16、页面Viewport标签的content属性内含“viewport-fit:cover”，便于适配iPhone X。
+##### 16、页面Viewport标签的content属性内含“viewport-fit:cover”，便于适配iPhone X；
+##### 17、使用 webpack3.x 的 Scope Hoisting 特性，提升构建打包速度；
+##### 18、单独抽离第三方依赖库，在不改变依赖库的前提下，只需上线一次依赖文件，减少页面加载时间。
 
 #### 使用注意事项：
 ##### 1、该脚手架中默认安装的是 react v16、react-router v4，请注意编码方法与之前版本的差异；
