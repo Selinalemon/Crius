@@ -1,7 +1,7 @@
 {
-  "name": "Crius",
-  "version": "2.0.0",
-  "description": "基于 Webpack 的 React 单页面应用脚手架",
+  "name": "{{projectName}}",
+  "version": "{{projectVersion}}",
+  "description": "{{projectDescription}}",
   "main": "app.jsx",
   "publicPath": "//static.360buyimg.com/exploit/crius",
   "ftpServer": "static.360buyimg.com",
@@ -14,7 +14,7 @@
     "upload": "cross-env NODE_ENV=upload webpack -p --hide-modules --progress",
     "dll": "webpack --config ./webpack.dll.config.js"
   },
-  "author": "sunyinfeng",
+  "author": "{{author}}",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
